@@ -2,15 +2,15 @@ WIP for album art thingy
 
 ### Authentication
 - authentication required to pull image URLs; use discogs Auth Flow rather than OAuth and its libraries
-- more info [here]: (https://www.discogs.com/developers/#page:authentication,header:authentication-discogs-auth-flow)
+- more info [here](https://www.discogs.com/developers/#page:authentication,header:authentication-discogs-auth-flow)
 - I think use consumer key/secret rather than personal tokens for ease of use
 
 ### RGB matrix
 I'm pretty sure adafruit has an rgb matrix setup script that I can curl into and run in a bash script
-[see here for example, lines 32-42] (https://github.com/ryanwa18/spotipi/blob/3acaf931d21adbdd54342e6cee137fb1f4cd9eda/setup.sh)
+[see here for example, lines 32-42](https://github.com/ryanwa18/spotipi/blob/3acaf931d21adbdd54342e6cee137fb1f4cd9eda/setup.sh)
 The link above (and the whole repo) will be valuable for building this jawn
-[RGB matrix] (https://www.adafruit.com/product/2026)
-[RGB bonnet] (https://www.adafruit.com/product/2026)
+[RGB matrix](https://www.adafruit.com/product/2026)
+[RGB bonnet](https://www.adafruit.com/product/2026)
 compatible with any raspberry pi with a 40-pin GPIO pin header
 
 ### TODO:
