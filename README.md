@@ -1,5 +1,7 @@
 WIP for album art thingy
 
+[Here's the video tutorial](https://www.youtube.com/watch?v=6i8kzqvh94E&t=622s)
+
 ### Authentication
 - authentication required to pull image URLs; use discogs Auth Flow rather than OAuth and its libraries
 - more info [here](https://www.discogs.com/developers/#page:authentication,header:authentication-discogs-auth-flow)
