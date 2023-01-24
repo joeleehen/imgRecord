@@ -16,6 +16,8 @@ The link above (and the whole repo) will be valuable for building this jawn
 
 [RGB bonnet](https://www.adafruit.com/product/2026) (out of stock rn)
 
+NOTE: instead of soldering, edit **/config/rgb_options.ini** and change `"adafruit-hat-pwm"` to `"adafruit-hat"`
+
 compatible with any raspberry pi with a 40-pin GPIO pin header
 
 ### TODO:
