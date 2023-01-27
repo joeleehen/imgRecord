@@ -1,0 +1,19 @@
+I don't really know how to make api GETs yet but I have my token! yippee
+
+token: uEfsYPggGDjMXoVbgYvPEFLYtUnRtucFQibSkSqi (no peeking)
+
+GET https://api.discogs.com/database/search?barcode=XXXXXX
+or maybe it's like this
+curl "https://api.discogs.com/database/search?barcode=0190295969158&token=uEfsYPggGDjMXoVbgYvPEFLYtUnRtucFQibSkSqi"
+this is the response:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1227    0  1227    0     0   4503      0 --:--:-- --:--:-- --:--:--  4527{"pagination": {"page": 1, "pages": 1, "per_page": 50, "items": 1, "urls": {}}, "results": [{"country": "US", "year": "2016", "format": ["Vinyl", "LP", "Album", "Reissue"], "label": ["Barnes & Noble", "Parlophone"], "type": "release", "genre": ["Rock"], "style": ["Alternative Rock"], "id": 8894847, "barcode": ["0190295969158", "5277831 2A", "5277831 2B"], "user_data": {"in_wantlist": false, "in_collection": true}, "master_id": 3334, "master_url": "https://api.discogs.com/masters/3334", "uri": "/release/8894847-Coldplay-Parachutes", "catno": "555488", "title": "Coldplay - Parachutes", "thumb": "https://i.discogs.com/9l34o5CaBt5sHELkzLmLxhwanVDb1iNDaLuoNBokpnc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg4OTQ4/NDctMTUxNzA4OTM0/MC04Mzc0LmpwZWc.jpeg", "cover_image": "https://i.discogs.com/bP5NN_G6uyS4nNfvGWazZ7r6mVqtjM3PyOllmFBxYM8/rs:fit/g:sm/q:90/h:595/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg4OTQ4/NDctMTUxNzA4OTM0/MC04Mzc0LmpwZWc.jpeg", "resource_url": "https://api.discogs.com/releases/8894847", "community": {"want": 1186, "have": 790}, "format_quantity": 1, "formats": [{"name": "Vinyl", "qty": "1", "text": "Orange Marble", "descriptions": ["LP", "Album", "Reissue"]}]}]}
+
+big long guy, but I get the image url! the authentication worked!
+https://i.discogs.com/bP5NN_G6uyS4nNfvGWazZ7r6mVqtjM3PyOllmFBxYM8/rs:fit/g:sm/q:90/h:595/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg4OTQ4/NDctMTUxNzA4OTM0/MC04Mzc0LmpwZWc.jpeg
+
+From discogs image API:
+" fetch the object that contains the image of interest (e.g., the release, user profile, etc.). The image URL will be in the response using the HTTPS protocol, and requesting that URL should succeed"
+
+not very helpful. How do I fetch the image URL from the request?
