@@ -10,6 +10,7 @@ WIP for album art thingy
 - [ ] create HTML landing page (needs camera button to scan barcode and text fields to enter artist and title)
 - [ ] what python packages do I need? rbgmatrix, requests(?), PIL:Image(?),
 - [x] figure out how to pass API pulls to python functions (bash scripting? how do search queries come in?)
+- [ ] what the eff is flask and how do I use it
 
 
 [Here's the video tutorial](https://www.youtube.com/watch?v=6i8kzqvh94E&t=622s)
