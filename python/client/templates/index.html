@@ -17,7 +17,7 @@
             <div>
                 <h1>Settings</h1>
                 <!-- TODO: configure post methods to like work -->
-                <form action="/brightness" method="POST"
+                <form action="/brightness" method="POST">
             <div class="form-group">
                 <label for="formControlRange">Brightness</label>
                 <input min="10" type="range" class="form-control-range" id="formControlRange" step="10" name="brightness"
@@ -25,6 +25,26 @@
                 <button type="submit" class="btn btn-primary">UPDATE</button>
             </div>
         </form>
+            </div>
+        </main>
+
+        <main class="container">
+            <div>
+                <br>
+                <form action="/textSearch" method = "POST">
+                    <center>
+                        {% if urlImg %}
+                        <img src={{urlImg}}>
+                        {% endif %}
+                    </center>
+                    <label for="album">Album   </label>
+                    <input type="text" name="album" id="album">
+
+                    <label for="artist">Artist</label>
+                    <input type="text" name="artist" id="artist">
+
+                    <input type="submit" class="file_submit">
+                </form>
             </div>
         </main>
     </body>

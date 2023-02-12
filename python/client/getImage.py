@@ -15,6 +15,8 @@ def getImageBar(search):
         return 0
 
 def getImageTxt(album, artist):
+    if album == "" or artist == "":
+        return
     payload = {'release_title' : str(album), 'artist' : str(artist), 'token' : 'uEfsYPggGDjMXoVbgYvPEFLYtUnRtucFQibSkSqi'}
     r = requests.get('https://api.discogs.com/database/search', params=payload)
     data = r.json()
