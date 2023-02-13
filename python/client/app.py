@@ -20,7 +20,7 @@ def textSearch():
 @app.route("/barSearch", methods = ["POST", "GET"])
 def barSearch():
     barcodeStr = request.form["barcodeStr"]
-    urlImg = getImageBar(urlImg)
+    urlImg = getImageBar(barcodeStr)
 
     return render_template("index.html", urlImg = urlImg)
 
