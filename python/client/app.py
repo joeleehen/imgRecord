@@ -17,5 +17,13 @@ def textSearch():
 
     return render_template("index.html", urlImg = urlImg)
 
+@app.route("/barSearch", methods = ["POST", "GET"])
+def barSearch():
+    barcodeStr = request.form["barcodeStr"]
+    urlImg = getImageBar(urlImg)
+
+    return render_template("index.html", urlImg = urlImg)
+
+
 if __name__ == "__main__":
     app.run()
