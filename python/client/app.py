@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
-import configparser
-import os
+import displayArt
 from getImage import *
 
 app = Flask(__name__)
@@ -14,6 +13,7 @@ def textSearch():
     album = request.form["album"]
     artist = request.form["artist"]
     urlImg = getImageTxt(album, artist)
+    displayArt(urlImg)
 
     return render_template("index.html", urlImg = urlImg)
 
@@ -21,6 +21,7 @@ def textSearch():
 def barSearch():
     barcodeStr = request.form["barcodeStr"]
     urlImg = getImageBar(barcodeStr)
+    displayArt(urlImg)
 
     return render_template("index.html", urlImg = urlImg)
 
