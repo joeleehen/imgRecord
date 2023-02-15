@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import displayArt
+from displayArt import displayArt
 from getImage import *
 
 app = Flask(__name__)
