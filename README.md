@@ -2,15 +2,15 @@ WIP for album art thingy
 
 
 ## TODO:
-- [ ] Get Raspberry pi, RGB matrix, RGB bonnet, solder the pins
-- [ ] assemble
+- [x] Get Raspberry pi, RGB matrix, RGB bonnet, solder the pins
+- [x] assemble
 - [x] write python code to get images from discogs
-- [ ] write python code to display image to RGB matrix
-- [ ] edit getImg to allow searching by artist and title
-- [ ] create HTML landing page (needs camera button to scan barcode and text fields to enter artist and title)
+- [x] write python code to display image to RGB matrix
+- [x] edit getImg to allow searching by artist and title
+- [x] create HTML landing page (needs camera button to scan barcode and text fields to enter artist and title)
 - [ ] what python packages do I need? rbgmatrix, requests(?), PIL:Image(?),
 - [x] figure out how to pass API pulls to python functions (bash scripting? how do search queries come in?)
-- [ ] what the eff is flask and how do I use it
+- [x] what the eff is flask and how do I use it
 
 
 [Here's the video tutorial](https://www.youtube.com/watch?v=6i8kzqvh94E&t=622s)
