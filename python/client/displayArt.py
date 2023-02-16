@@ -16,12 +16,19 @@ def displayArt(url):
     options.gpio_slowdown = 4
 
     matrix = RGBMatrix(options = options)    # pop off (only on occasion) brother
+    headers = {
+        "User-Agent": "imgRecord/5.0",
+    }
+    response = requests.get(url, headers=headers)    # get binary for image 
 
-    url = sys.argv[1]
-    response = requests.get(url)
-    img = Image.open(BytesIO(response.content))
+    # write image to file
+    temp = open("temp.jpg", "wb")
+    temp.write(response.content)
+    temp.close()
+    img = Image.open("temp.jpg")
+
+    # image to matrix
     img.thumbnail((matrix.width, matrix.height), Image.ANTIALIAS)
-
     matrix.SetImage(img.convert("RGB"))
 
     return
