@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from werkzeug.exceptions import HTTPException
 from displayArt import displayArt
 from getImage import *
 
@@ -16,6 +17,7 @@ def textSearch():
     displayArt(urlImg)
 
     return render_template("index.html", urlImg = urlImg)
+
 
 @app.route("/barSearch", methods = ["POST", "GET"])
 def barSearch():
