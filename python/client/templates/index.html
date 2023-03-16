@@ -43,6 +43,7 @@
                         <img src={{urlImg}}>
                         {% endif %}
                     </center>
+		    <label for="barcodeStr"></label>
                     <input type="hidden" name="barcodeStr" id="barcodeStr">
                 </form>
             </div>
@@ -73,17 +74,17 @@
                 rememberLastUsedCamera: true
             });
 
-            scanner.render(success);
-
             var lastScan;
-            function success(result) {
+            function success(decodedText, result) {
                 if (lastScan !== result) {
                     console.log(result);
                     // populate and submit /barSearch form
-                    document.getElementById("barcodeStr").value = "${result}";
+                    document.getElementById("barcodeStr").value = decodedText; 
                     document.getElementById("barForm").submit();
                 }
             }
+	    
+	    scanner.render(success);
         </script>
     </body>
 </html>
