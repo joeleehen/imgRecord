@@ -8,8 +8,8 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 def displayArt(url):
     # matrix configuration
     options = RGBMatrixOptions()    # amazing brother
-    options.rows = 32
-    options.cols = 32
+    options.rows = 64 
+    options.cols = 64 
     options.chain_length = 1
     options.parallel = 1
     options.hardware_mapping = 'adafruit-hat'
