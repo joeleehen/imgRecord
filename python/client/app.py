@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from werkzeug.exceptions import HTTPException
 from displayArt import displayArt
 from getImage import *
 
@@ -17,6 +18,7 @@ def textSearch():
 
     return render_template("index.html", urlImg = urlImg)
 
+
 @app.route("/barSearch", methods = ["POST", "GET"])
 def barSearch():
     barcodeStr = request.form["barcodeStr"]
@@ -27,4 +29,4 @@ def barSearch():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run()

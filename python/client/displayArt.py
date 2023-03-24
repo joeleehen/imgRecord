@@ -8,12 +8,13 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 def displayArt(url):
     # matrix configuration
     options = RGBMatrixOptions()    # amazing brother
-    options.rows = 32
-    options.cols = 32
+    options.rows = 64 
+    options.cols = 64 
     options.chain_length = 1
     options.parallel = 1
     options.hardware_mapping = 'adafruit-hat'
-    options.gpio_slowdown = 4
+    options.gpio_slowdown = 4 
+    # options.disable_hardware_pulsing = True
 
     matrix = RGBMatrix(options = options)    # pop off (only on occasion) brother
     headers = {
@@ -28,7 +29,10 @@ def displayArt(url):
     img = Image.open("temp.jpg")
 
     # image to matrix
+    img = img.convert('RGB')
     img.thumbnail((matrix.width, matrix.height), Image.ANTIALIAS)
-    matrix.SetImage(img.convert("RGB"))
 
-    return
+    while True:
+        matrix.SetImage(img, unsafe=False)
+        raise 
+    return KeyboardInterrupt    # idk why this works but fuck it we ball

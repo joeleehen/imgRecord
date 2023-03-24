@@ -17,21 +17,6 @@
 
     <body>
         <main class="container">
-            <div id="settings">
-                <h1>Settings</h1>
-                <!-- TODO: configure post methods to like work -->
-                <form action="/brightness" method="POST">
-            <div class="form-group">
-                <label for="formControlRange">Brightness</label>
-                <input min="10" type="range" class="form-control-range" id="formControlRange" step="10" name="brightness"
-                value="{{ brightness }}">
-                <button type="submit" class="btn btn-primary">UPDATE</button>
-            </div>
-        </form>
-            </div>
-        </main>
-
-        <main class="container">
 
             <div id="barScan">
                 <div id="reader" style="width: 600px"></div>
@@ -43,6 +28,7 @@
                         <img src={{urlImg}}>
                         {% endif %}
                     </center>
+		    <label for="barcodeStr"></label>
                     <input type="hidden" name="barcodeStr" id="barcodeStr">
                 </form>
             </div>
@@ -73,17 +59,17 @@
                 rememberLastUsedCamera: true
             });
 
-            scanner.render(success);
-
             var lastScan;
-            function success(result) {
+            function success(decodedText, result) {
                 if (lastScan !== result) {
                     console.log(result);
                     // populate and submit /barSearch form
-                    document.getElementById("barcodeStr").value = "${result}";
+                    document.getElementById("barcodeStr").value = decodedText; 
                     document.getElementById("barForm").submit();
                 }
             }
+	    
+	    scanner.render(success);
         </script>
     </body>
 </html>
