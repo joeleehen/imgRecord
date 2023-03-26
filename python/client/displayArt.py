@@ -13,8 +13,9 @@ def displayArt(url):
     options.chain_length = 1
     options.parallel = 1
     options.hardware_mapping = 'adafruit-hat'
-    options.gpio_slowdown = 4 
+    options.gpio_slowdown = 1
     # options.disable_hardware_pulsing = True
+    options.brightness = 75
 
     matrix = RGBMatrix(options = options)    # pop off (only on occasion) brother
     headers = {
