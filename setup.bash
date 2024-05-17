@@ -16,3 +16,9 @@ cd imgRecord
 
 # self-signed certificate
 openssl req -newkey rsa:4096 -x509 -sha512 -days 365 -nodes -out cert.pem -keyout key.pem
+
+echo "alias imgRecord=cd ~/imgRecord/python/client && flask run --host=0.0.0.0 --cert=cert.pem --key=key.pem" >> ~/.bashrc
+source .bashrc
+
+echo "Setup complete! Run 'imgRecord' to start web server."
+
